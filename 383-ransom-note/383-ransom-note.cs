@@ -4,11 +4,12 @@ public class Solution {
         List<char> magazineList = new List<char>(magazine);
         bool result = true;
         foreach(char c in ransomList){
-            if(!magazineList.Contains(c)){
-                result = false;
-                break;
+            if(magazineList.Contains(c)){
+                magazineList.Remove(c);
             }
-            magazineList.Remove(c);
+            else{
+                result = false;
+            }
         }
         return result;
     }
