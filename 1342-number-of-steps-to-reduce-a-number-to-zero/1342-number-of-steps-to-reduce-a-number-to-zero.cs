@@ -1,13 +1,12 @@
 public class Solution {
     public int NumberOfSteps(int num) {
         int steps = 0;
-        int n = num;
-        while(n != 0){
-            if(n % 2 == 0){
-                n = n/2;
+        while(num != 0){
+            if(num % 2 == 0){
+                num = num/2;
             }
             else{
-                n--;
+                num--;
             }
             steps++;
         }
